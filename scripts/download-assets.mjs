@@ -10,6 +10,16 @@ import { finished } from 'stream/promises';
  */
 const ROOT = process.cwd();
 const MANIFEST_PATH = path.join(ROOT, 'scripts', 'assets-manifest.json');
+const DEFAULT_TIMEOUT_MS = Number(process.env.ASSET_DOWNLOAD_TIMEOUT_MS ?? 60000);
+
+function shouldSkipAssetSync() {
+  const force = process.env.FORCE_ASSET_SYNC === 'true';
+  if (force) return false;
+
+  const isHostedCi = process.env.CI === 'true' || process.env.VERCEL === '1';
+  const allowInCi = process.env.ASSET_SYNC_IN_CI === 'true';
+  return isHostedCi && !allowInCi;
+}
 
 function loadManifest() {
   if (!fs.existsSync(MANIFEST_PATH)) {
@@ -35,7 +45,9 @@ async function sha256File(filePath) {
 }
 
 async function downloadToFile(url, dest, headers = {}) {
-  const res = await fetch(url, { headers });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), DEFAULT_TIMEOUT_MS);
+  const res = await fetch(url, { headers, signal: controller.signal }).finally(() => clearTimeout(timeout));
   if (!res.ok) {
     const err = new Error(`HTTP ${res.status} ${res.statusText}`);
     err.status = res.status;
@@ -106,6 +118,11 @@ function buildHeaders() {
 }
 
 (async () => {
+  if (shouldSkipAssetSync()) {
+    console.log('Skipping asset sync in CI/Vercel. Set FORCE_ASSET_SYNC=true to override.');
+    return;
+  }
+
   console.log('Hydrating project assets...');
 
   const assets = loadManifest();

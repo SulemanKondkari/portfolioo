@@ -117,6 +117,11 @@ npm run assets:sync
 Private release support:
 - Set `GITHUB_TOKEN` before running sync (script sends auth header automatically).
 
+CI/Vercel behavior:
+- Asset sync is skipped automatically in hosted CI environments (`CI=true` or `VERCEL=1`).
+- To force hydration in CI, set `ASSET_SYNC_IN_CI=true` (or `FORCE_ASSET_SYNC=true`).
+- Download timeout can be tuned with `ASSET_DOWNLOAD_TIMEOUT_MS`.
+
 ### Updating Assets Safely
 
 1. Add new files under a new release tag (`assets-v1.0.1`, `assets-v1.1.0`, etc.).
