@@ -37,7 +37,7 @@ export default function ProjectsPage() {
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold uppercase tracking-tighter italic text-red-600">The Philosophy</h3>
                 <p className="text-neutral-400 leading-relaxed font-medium">
-                  Every pixel serves a purpose. I don't just build websites; I craft digital narratives that resonate with users and push technical boundaries.
+                  Every pixel serves a purpose. I don&apos;t just build websites; I craft digital narratives that resonate with users and push technical boundaries.
                 </p>
               </div>
               <div className="space-y-4">

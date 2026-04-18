@@ -147,7 +147,8 @@ const MagneticButton = React.forwardRef<HTMLElement, MagneticButtonProps>(
       if (!element) return;
 
       const ctx = gsap.context(() => {
-        const handleMouseMove = (e: MouseEvent) => {
+        const handleMouseMove: EventListener = (event) => {
+          const e = event as MouseEvent;
           const rect = element.getBoundingClientRect();
           const h = rect.width / 2;
           const w = rect.height / 2;
@@ -177,11 +178,11 @@ const MagneticButton = React.forwardRef<HTMLElement, MagneticButtonProps>(
           });
         };
 
-        element.addEventListener("mousemove", handleMouseMove as any);
+        element.addEventListener("mousemove", handleMouseMove);
         element.addEventListener("mouseleave", handleMouseLeave);
 
         return () => {
-          element.removeEventListener("mousemove", handleMouseMove as any);
+          element.removeEventListener("mousemove", handleMouseMove);
           element.removeEventListener("mouseleave", handleMouseLeave);
         };
       }, element);
@@ -192,9 +193,11 @@ const MagneticButton = React.forwardRef<HTMLElement, MagneticButtonProps>(
     return (
       <Component
         ref={(node: HTMLElement) => {
-          (localRef as any).current = node;
+          localRef.current = node;
           if (typeof forwardedRef === "function") forwardedRef(node);
-          else if (forwardedRef) (forwardedRef as any).current = node;
+          else if (forwardedRef) {
+            (forwardedRef as React.MutableRefObject<HTMLElement | null>).current = node;
+          }
         }}
         className={cn("cursor-pointer", className)}
         {...props}
@@ -215,7 +218,7 @@ const MarqueeItem = () => (
     <span>Temp Email Agent</span> <span className="text-red-600/60">✦</span>
     <span>AI Logic Mastery</span> <span className="text-red-600/60">✦</span>
     <span>Seamless Integration</span> <span className="text-red-600/60">✦</span>
-    <span>Suleman's Project</span> <span className="text-red-600/60">✦</span>
+    <span>Suleman&apos;s Project</span> <span className="text-red-600/60">✦</span>
   </div>
 );
 

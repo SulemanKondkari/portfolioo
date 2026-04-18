@@ -62,9 +62,9 @@ export default function MegaProjectSection() {
               <AnimatedSpan className="text-green-500">✔ Temp Email: suleman_agent@1secmail.com</AnimatedSpan>
               <TypingAnimation duration={20} delay={1000}>[Agent] Navigating to target registration...</TypingAnimation>
               <AnimatedSpan className="text-purple-400">✦ AI Loop: Extracting interactive DOM components...</AnimatedSpan>
-              <AnimatedSpan className="text-purple-400">✦ AI Loop: Mapping 'DisplayName' to Suleman Kondkari.</AnimatedSpan>
+              <AnimatedSpan className="text-purple-400">✦ AI Loop: Mapping &apos;DisplayName&apos; to Suleman Kondkari.</AnimatedSpan>
               <AnimatedSpan className="text-white font-bold italic border-l-2 border-red-600 pl-4 py-1 bg-red-600/5">
-                "Form verification required. Does the layout look valid? (Voice Input: CONFIRMED)"
+                &quot;Form verification required. Does the layout look valid? (Voice Input: CONFIRMED)&quot;
               </AnimatedSpan>
               <AnimatedSpan className="text-green-500">✔ Executing human-like keystrokes...</AnimatedSpan>
               <AnimatedSpan className="text-red-500 font-bold tracking-tighter shadow-sm">

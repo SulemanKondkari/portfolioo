@@ -46,8 +46,8 @@ export function ProjectsIntro() {
           
           <BlurFade delay={0.3} inView>
             <p className="max-w-2xl text-xl text-neutral-400 font-medium italic">
-              "An interactive glimpse into my work—scroll, click, and explore. 
-              The future of web experiences is here."
+              &quot;An interactive glimpse into my work-scroll, click, and explore. 
+              The future of web experiences is here.&quot;
             </p>
           </BlurFade>
         </div>

@@ -121,7 +121,7 @@ export default function MultiOrbitSemiCircle() {
           Connect <span className="text-red-600 italic">With</span> Me
         </h2>
         <p className="mb-12 max-w-xl text-white/50 text-sm sm:text-base md:text-lg font-medium leading-relaxed uppercase tracking-widest">
-            I'm always open to new projects, collaborations, or just a friendly conversation.
+            I&apos;m always open to new projects, collaborations, or just a friendly conversation.
         </p>
 
         <div
