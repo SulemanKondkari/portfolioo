@@ -41,30 +41,14 @@ yarn-error.log*
 next-env.d.ts
 
 # Heavy Assets (Managed via GitHub Releases / External Hosting)
-public/**/*.mp4
-public/**/*.mov
-public/**/*.mkv
-public/**/*.avi
-public/**/*.zip
-public/**/*.pdf
-public/**/*.csv
-public/**/*.tsv
-public/**/*.parquet
-public/**/*.npy
-public/**/*.npz
-public/**/*.h5
-public/downloads/
-public/media/
-**/*.zip
-**/*.mov
-**/*.mkv
-**/*.avi
-**/*.pdf
-**/*.parquet
-**/*.npy
-**/*.npz
+# Allow these as requested by user
+!**/*.zip
+!**/*.mov
+!**/*.mp4
+!**/*.pdf
 
-# OS/Editor
-.DS_Store
-.vscode/
-.idea/
+# But exclude the specific massive files that exceed GitHub's 100MB limit
+Screen Recording*.mov
+public/media/temp-mail-agent.mov
+
+# typescript
