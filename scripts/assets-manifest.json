@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "assets": [
+    {
+      "name": "home-hero-video",
+      "url": "https://github.com/SulemanKondkari/finalportfolio/releases/download/assets-v1.0.0/animate_this_into_202604151849.mp4",
+      "dest": "public/animate_this_into_202604151849.mp4",
+      "sha256": "d50fbfa91c629cf8fe223dec53cac6037cd9d788d211dc9b041aeb92c716f940",
+      "required": true
+    },
+    {
+      "name": "temp-mail-agent-demo-video",
+      "url": "https://github.com/SulemanKondkari/finalportfolio/releases/download/assets-v1.0.0/temp-mail-agent.mov",
+      "dest": "public/media/temp-mail-agent.mov",
+      "sha256": "a5dda4db4543e47aceb2d650ece7ff86c3888d10902eec67c57e12f5df5973cd",
+      "required": true
+    },
+    {
+      "name": "temp-mail-agent-source-zip",
+      "url": "https://github.com/SulemanKondkari/finalportfolio/releases/download/assets-v1.0.0/temp-mail-agent.zip",
+      "dest": "public/temp-mail-agent.zip",
+      "sha256": "8588f21b2e21f1964c4d3ea434483a4334cd74b935e4a015cae7635644826091",
+      "required": true
+    },
+    {
+      "name": "temp-mail-agent-report-pdf",
+      "url": "https://github.com/SulemanKondkari/finalportfolio/releases/download/assets-v1.0.0/temp-mail-agent-report.pdf",
+      "dest": "public/temp-mail-agent-report.pdf",
+      "sha256": "97f8ae36e68761f9ee91f8c9dbcf8e0bde9f45d6e12c260c240e333ce98ab43b",
+      "required": true
+    }
+  ]
+}

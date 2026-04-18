@@ -43,13 +43,26 @@ next-env.d.ts
 # Heavy Assets (Managed via GitHub Releases / External Hosting)
 public/**/*.mp4
 public/**/*.mov
+public/**/*.mkv
+public/**/*.avi
 public/**/*.zip
 public/**/*.pdf
+public/**/*.csv
+public/**/*.tsv
+public/**/*.parquet
+public/**/*.npy
+public/**/*.npz
+public/**/*.h5
 public/downloads/
 public/media/
 **/*.zip
 **/*.mov
+**/*.mkv
+**/*.avi
 **/*.pdf
+**/*.parquet
+**/*.npy
+**/*.npz
 
 # OS/Editor
 .DS_Store
