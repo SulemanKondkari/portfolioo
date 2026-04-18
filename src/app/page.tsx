@@ -41,14 +41,14 @@ export default function HomePage() {
         <div className="relative z-10 flex flex-col items-center w-full max-w-7xl mx-auto">
 
           <h1 
-            className="animate-fade-rise text-6xl sm:text-8xl md:text-9xl leading-[0.95] tracking-[-3.46px] font-bold font-display uppercase"
+            className="animate-fade-rise text-6xl sm:text-8xl md:text-9xl leading-[0.95] tracking-[-3.46px] font-bold font-display uppercase text-black"
           >
-            <span className="text-black">Suleman</span> <span className="text-red-600">Kondkari.</span> <br />
-            <span className="text-red-600">Building</span> <em className="not-italic text-black">dreams</em> <span className="text-red-600">through the silence.</span>
+            Suleman <span className="text-red-600">Kondkari.</span> <br />
+            <span className="text-red-600 italic">Designing</span> the <em className="not-italic text-red-600">Future.</em>
           </h1>
           
           <p className="animate-fade-rise-delay text-red-600 text-xl sm:text-2xl md:text-3xl max-w-4xl mt-12 leading-tight font-bold font-body italic opacity-90">
-            <span className="text-black">I prefer learning by </span> building, experimenting, <span className="text-black">and figuring things out </span> hands-on..
+            <span className="text-black">The official portfolio of </span> Suleman Kondkari, <span className="text-black">specializing in high-performance digital architecture and </span> cinematic UX.
           </p>
 
           <div className="animate-fade-rise-delay-2 mt-20">
