@@ -39,3 +39,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Heavy Assets (Managed via GitHub Releases / External Hosting)
+public/**/*.mp4
+public/**/*.mov
+public/**/*.zip
+public/**/*.pdf
+public/downloads/
+public/media/
+**/*.zip
+**/*.mov
+**/*.pdf
+
+# OS/Editor
+.DS_Store
+.vscode/
+.idea/

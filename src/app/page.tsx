@@ -1,65 +1,98 @@
-import Image from "next/image";
+import { AnimatedNavFramer } from "@/components/ui/navigation-menu";
+import { Button } from "@/components/ui/button";
+import { AboutSection } from "@/components/about-section";
+import { ServicesSection } from "@/components/services-section";
+import { ProjectsIntro } from "@/components/projects-intro";
+import { TextRevealByWord } from "@/components/ui/text-reveal";
+import { Contact2 } from "@/components/ui/contact-2";
+import MultiOrbitSemiCircle from "@/components/ui/multi-orbit-semi-circle";
+import { Footer } from "@/components/ui/modem-animated-footer";
 
-export default function Home() {
+
+
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="relative min-h-screen bg-background selection:bg-red-500/10 selection:text-red-600">
+
+      <AnimatedNavFramer />
+
+      <main>
+        {/* Hero Section */}
+        <section id="home" className="relative flex flex-col items-center justify-center text-center px-6 pt-32 pb-40 min-h-screen" aria-label="Hero Section">
+        {/* Background handling: Video for Desktop, Solid Color fallback for Mobile */}
+        <div className="absolute inset-0 z-0 bg-neutral-200">
+          {/* Desktop Video */}
+          <div className="hidden md:block absolute inset-0">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover brightness-100 contrast-[1.1]"
+            >
+              <source src="/animate_this_into_202604151849.mp4" type="video/mp4" />
+            </video>
+          </div>
+          {/* Subtle overlay */}
+          <div className="absolute inset-0 bg-white/2" />
+        </div>
+        
+        <div className="relative z-10 flex flex-col items-center w-full max-w-7xl mx-auto">
+
+          <h1 
+            className="animate-fade-rise text-6xl sm:text-8xl md:text-9xl leading-[0.95] tracking-[-3.46px] font-bold font-display uppercase"
+          >
+            <span className="text-black">Suleman</span> <span className="text-red-600">Kondkari.</span> <br />
+            <span className="text-red-600">Building</span> <em className="not-italic text-black">dreams</em> <span className="text-red-600">through the silence.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          
+          <p className="animate-fade-rise-delay text-red-600 text-xl sm:text-2xl md:text-3xl max-w-4xl mt-12 leading-tight font-bold font-body italic opacity-90">
+            <span className="text-black">I prefer learning by </span> building, experimenting, <span className="text-black">and figuring things out </span> hands-on..
           </p>
+
+          <div className="animate-fade-rise-delay-2 mt-20">
+            <button className="liquid-glass rounded-full px-14 py-5 text-base text-black bg-red-600/10 border-red-600/20 hover:scale-[1.03] transition-transform cursor-pointer font-bold backdrop-blur-md uppercase tracking-widest">
+              Begin Journey
+            </button>
+          </div>
+
+          {/* Spacer to prevent About section overlap from hitting the hero text */}
+          <div className="h-[100vh]" aria-hidden="true" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </section>
+
+      {/* About Section */}
+      <section id="about" aria-label="About Me">
+        <AboutSection />
+      </section>
+
+      {/* Services Section */}
+      <section id="services" aria-label="My Services">
+        <ServicesSection />
+      </section>
+
+      {/* Projects Intro Section */}
+      <section id="projects" aria-label="My Projects">
+        <ProjectsIntro />
+      </section>
+
+      {/* Connect Section */}
+      <section id="connect" aria-label="Connect With Me">
+        <MultiOrbitSemiCircle />
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" aria-label="Contact Form">
+        <Contact2 />
+      </section>
       </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
+
+
+
   );
 }
