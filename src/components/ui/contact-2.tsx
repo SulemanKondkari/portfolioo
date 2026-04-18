@@ -106,7 +106,7 @@ export const Contact2 = ({
                 <input 
                   type="hidden" 
                   name="access_key" 
-                  value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_ACCESS_KEY_HERE"} 
+                  value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "3990c9b8-c17f-43a3-8a09-1338518f7cb5"} 
                 />
                 <input type="hidden" name="subject" value="New Portfolio Message from Suleman's Site" />
                 <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
