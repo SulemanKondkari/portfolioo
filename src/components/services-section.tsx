@@ -31,7 +31,7 @@ function PerspectiveMarqueeScene() {
 
 export function ServicesSection() {
   return (
-    <section className="relative min-h-screen w-full bg-black text-white overflow-hidden py-32">
+    <section className="relative min-h-screen w-full bg-black text-white overflow-hidden py-12 md:py-32">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -47,7 +47,7 @@ export function ServicesSection() {
       <div className="relative z-10 container mx-auto px-6">
         {/* Header */}
         <BlurFade delay={0.1} inView>
-          <div className="flex flex-col items-center text-center mb-24">
+          <div className="flex flex-col items-center text-center mb-12 md:mb-24">
             <div className="flex items-center gap-4 mb-6">
               <span className="h-[1px] w-12 bg-red-600" />
               <span className="text-red-500 font-bold tracking-[0.2em] text-sm uppercase">Services</span>
@@ -63,7 +63,7 @@ export function ServicesSection() {
         </BlurFade>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-40">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 md:mb-40">
           <BlurFade delay={0.2} inView>
             <div className="group relative p-8 bg-neutral-900/50 border border-white/5 backdrop-blur-xl hover:border-red-600/50 transition-all duration-500">
               <div className="mb-6 text-red-600">
@@ -140,11 +140,11 @@ export function ServicesSection() {
             <h4 className="text-xs font-black tracking-[0.4em] uppercase text-neutral-500 mb-12">Technologies Used</h4>
           </BlurFade>
           
-          <div className="w-full mb-32">
+          <div className="w-full mb-12 md:mb-32">
             <LogoCloud logos={logos} />
           </div>
 
-          <div className="relative w-full h-[400px] border border-white/5 bg-black/50 overflow-hidden">
+          <div className="relative w-full h-[250px] md:h-[400px] border border-white/5 bg-black/50 overflow-hidden">
             <Player
               component={PerspectiveMarqueeScene}
               durationInFrames={600}
