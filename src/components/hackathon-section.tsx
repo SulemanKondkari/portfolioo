@@ -15,11 +15,11 @@ export function HackathonSection() {
           src="/backgrounds/hackathon-bg.jpeg"
           alt="Hackathon Background"
           fill
-          className="object-cover opacity-40 grayscale"
+          className="object-cover opacity-60 transition-opacity duration-1000"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black" />
-        <div className="absolute inset-0 bg-radial-at-c from-red-600/5 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
