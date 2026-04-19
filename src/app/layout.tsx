@@ -46,6 +46,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark h-full antialiased">
       <head>
+        <link
+          rel="preload"
+          href="/fonts/vfc-fantomen-press.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
