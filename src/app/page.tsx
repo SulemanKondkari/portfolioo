@@ -7,6 +7,7 @@ import { TextRevealByWord } from "@/components/ui/text-reveal";
 import { Contact2 } from "@/components/ui/contact-2";
 import MultiOrbitSemiCircle from "@/components/ui/multi-orbit-semi-circle";
 import { Footer } from "@/components/ui/modem-animated-footer";
+import { HackathonSection } from "@/components/hackathon-section";
 
 
 
@@ -72,6 +73,11 @@ export default function HomePage() {
       {/* Projects Intro Section */}
       <section id="projects" aria-label="My Projects">
         <ProjectsIntro />
+      </section>
+
+      {/* Hackathon Section */}
+      <section id="hackathons" aria-label="Hackathons & Achievements">
+        <HackathonSection />
       </section>
 
       {/* Connect Section */}
