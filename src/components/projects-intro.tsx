@@ -11,7 +11,7 @@ export function ProjectsIntro() {
   return (
     <section className="relative w-full bg-black overflow-hidden">
       {/* Sticky Background Container - Fix for stretching issue */}
-      <div className="sticky top-0 h-screen w-full z-0 pointer-events-none">
+      <div className="sticky top-0 h-[50vh] md:h-screen w-full z-0 pointer-events-none">
         <div className="absolute inset-0">
           <Image
             src="/backgrounds/project-bg.jpg"
@@ -26,7 +26,7 @@ export function ProjectsIntro() {
       </div>
 
       {/* Content Layer */}
-      <div className="relative z-10 container mx-auto px-6 -mt-[100vh] pt-24 pb-24">
+      <div className="relative z-10 container mx-auto px-6 -mt-[30vh] md:-mt-[100vh] pt-24 pb-24">
         {/* Header Section */}
         <div className="flex flex-col items-center text-center mb-16">
           <BlurFade delay={0.1} inView>

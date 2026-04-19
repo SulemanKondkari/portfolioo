@@ -19,9 +19,9 @@ export function AboutSection() {
   const backgroundScale = useTransform(scrollYProgress, [0, 1], [1.1, 1]);
 
   return (
-    <section ref={sectionRef} className="relative min-h-[150vh] w-full bg-black text-white overflow-hidden">
+    <section ref={sectionRef} className="relative min-h-[120vh] md:min-h-[150vh] w-full bg-black text-white overflow-hidden">
       {/* Dynamic Background Artwork */}
-      <div className="sticky top-0 h-screen w-full z-0 overflow-hidden">
+      <div className="sticky top-0 h-[60vh] md:h-screen w-full z-0 overflow-hidden">
         <motion.div 
           style={{ x: backgroundX, scale: backgroundScale }}
           className="relative w-[120%] h-full"
@@ -39,7 +39,7 @@ export function AboutSection() {
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 py-24 -mt-[100vh]">
+      <div className="relative z-10 container mx-auto px-6 py-24 -mt-[40vh] md:-mt-[100vh]">
         {/* Small Label */}
         <BlurFade delay={0.1} inView>
           <div className="flex items-center gap-4 mb-20">
