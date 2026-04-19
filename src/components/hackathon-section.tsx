@@ -11,13 +11,26 @@ export function HackathonSection() {
     <section id="achievements" className="relative w-full bg-black text-white py-24 md:py-40 overflow-hidden border-t border-white/5">
       {/* Cinematic Background */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/backgrounds/hackathon-bg.jpeg"
-          alt="Hackathon Background"
-          fill
-          className="object-cover opacity-60 transition-opacity duration-1000"
-          priority
-        />
+        {/* Desktop Image */}
+        <div className="hidden md:block absolute inset-0">
+          <Image
+            src="/backgrounds/hackathon-bg.jpeg"
+            alt="Hackathon Background"
+            fill
+            className="object-cover opacity-60 transition-opacity duration-1000"
+            priority
+          />
+        </div>
+        {/* Mobile Image - Optimized Ratio */}
+        <div className="md:hidden absolute inset-0">
+          <Image
+            src="/backgrounds/hackathon-bg-mobile.png"
+            alt="Hackathon Background Mobile"
+            fill
+            className="object-cover opacity-70"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />
         <div className="absolute inset-0 bg-black/20" />
       </div>
