@@ -18,7 +18,7 @@ interface Contact2Props {
 export const Contact2 = ({
   title = "Get in Touch",
   description = "Have a project in mind or just want to say hi? Feel free to reach out. I'm always open to new opportunities and collaborations.",
-  phone = "+91 93218676046",
+  phone = "",
   email = "kondkarifareen9@gmail.com",
   web = { label: "github.com/SulemanKondkari", url: "https://github.com/SulemanKondkari" },
 }: Contact2Props) => {
@@ -52,15 +52,17 @@ export const Contact2 = ({
                 Contact Details
               </h3>
               <div className="space-y-6">
-                <div className="flex items-center gap-4 group">
-                  <div className="p-3 bg-red-600/10 rounded-full border border-red-600/20 group-hover:bg-red-600/20 transition-colors">
-                    <Phone className="w-5 h-5 text-red-600" />
+                {phone && (
+                  <div className="flex items-center gap-4 group">
+                    <div className="p-3 bg-red-600/10 rounded-full border border-red-600/20 group-hover:bg-red-600/20 transition-colors">
+                      <Phone className="w-5 h-5 text-red-600" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold">Phone</p>
+                      <p className="text-lg font-bold">{phone}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 font-bold">Phone</p>
-                    <p className="text-lg font-bold">{phone}</p>
-                  </div>
-                </div>
+                )}
 
                 <div className="flex items-center gap-4 group">
                   <div className="p-3 bg-red-600/10 rounded-full border border-red-600/20 group-hover:bg-red-600/20 transition-colors">
