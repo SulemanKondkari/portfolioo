@@ -2,7 +2,7 @@
 
 import { BlurFade } from "@/components/ui/blur-fade";
 import { TextRevealByWord } from "@/components/ui/text-reveal";
-import { Component as ImageZoomComponent } from "@/components/ui/image-zoom";
+import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
 import Image from "next/image";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -102,7 +102,27 @@ export function AboutSection() {
           {/* Media Side */}
           <div className="flex flex-col items-center lg:items-end justify-center lg:pt-20">
               <div className="w-full max-w-lg">
-                <ImageZoomComponent name="Suleman Kondkari" imageSrc="/profile-new.webp" />
+                <PixelatedCanvas
+                  src="/profile-new.webp"
+                  width={400}
+                  height={500}
+                  cellSize={3}
+                  dotScale={0.9}
+                  shape="square"
+                  backgroundColor="#000000"
+                  dropoutStrength={0.4}
+                  interactive
+                  distortionStrength={3}
+                  distortionRadius={80}
+                  distortionMode="swirl"
+                  followSpeed={0.2}
+                  jitterStrength={4}
+                  jitterSpeed={4}
+                  sampleAverage
+                  tintColor="#FFFFFF"
+                  tintStrength={0.2}
+                  className="rounded-xl border border-neutral-800 shadow-lg w-full max-w-full h-auto"
+                />
              </div>
           </div>
         </div>
