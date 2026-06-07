@@ -13,7 +13,7 @@
       "url": "https://github.com/SulemanKondkari/finalportfolio/releases/download/assets-v1.0.0/temp-mail-agent.mov",
       "dest": "public/media/temp-mail-agent.mov",
       "sha256": "a5dda4db4543e47aceb2d650ece7ff86c3888d10902eec67c57e12f5df5973cd",
-      "required": true
+      "required": false
     },
     {
       "name": "temp-mail-agent-source-zip",
