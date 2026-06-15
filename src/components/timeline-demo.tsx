@@ -8,6 +8,36 @@ import Image from "next/image";
 export default function TimelineDemo() {
   const data = [
     {
+      title: "Digital Universe",
+      content: (
+        <div className="space-y-8">
+          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-medium leading-relaxed">
+            A retro RPG adventure portfolio for <span className="text-red-600 font-bold">Gandhar Desai</span>. Built with a pixel-perfect aesthetic, featuring interactive levels, character stats, interactive skill trees, and a custom command-line terminal interface.
+          </p>
+          <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+            <Image
+              src="/projects/gandhardesai.jpg"
+              alt="Gandhar Desai Digital Universe"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="flex justify-start">
+            <Link href="https://gandhardesai.vercel.app/" target="_blank">
+              <NoiseBackground
+                containerClassName="w-fit p-1 rounded-full"
+                gradientColors={["rgb(220, 38, 38)", "rgb(0, 0, 0)", "rgb(255, 0, 0)"]}
+              >
+                <div className="cursor-pointer rounded-full bg-linear-to-r from-neutral-100 via-neutral-100 to-white px-8 py-3 text-black shadow-[0px_2px_0px_0px_var(--color-neutral-50)_inset,0px_0.5px_1px_0px_var(--color-neutral-400)] transition-all duration-100 active:scale-95 dark:from-black dark:via-black dark:to-neutral-900 dark:text-white dark:shadow-[0px_1px_0px_0px_var(--color-neutral-950)_inset,0px_1px_0px_0px_var(--color-neutral-800)] font-bold uppercase tracking-widest text-xs">
+                  Enter Universe &rarr;
+                </div>
+              </NoiseBackground>
+            </Link>
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "Modern Fitness",
       content: (
         <div className="space-y-8">

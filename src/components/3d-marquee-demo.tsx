@@ -4,6 +4,11 @@ import { ThreeDMarquee } from "@/components/ui/3d-marquee";
 export default function ThreeDMarqueeDemo() {
   const projects = [
     {
+      title: "Digital Universe",
+      image: "/projects/gandhardesai.jpg",
+      link: "https://gandhardesai.vercel.app",
+    },
+    {
       title: "iPhone 15 Pro Clone",
       image: "/projects/iphoneclone.png",
       link: "https://iphoneclonesuleman.vercel.app",
